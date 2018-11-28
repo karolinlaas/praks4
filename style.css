@@ -1,0 +1,261 @@
+* {
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Montserrat;
+}
+
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+header {
+	background-image: url("first.jpg");
+	height: 100vh;
+	background-position: center bottom;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.logo {
+	font-size: 30px;
+	font-weight: bold;
+	color: white;
+	margin-top: 40px;
+	float: left;
+}
+
+.row {
+	margin: 0 auto;
+	width: 1140px;
+}
+
+.row svg {
+	display: none;
+}
+
+.main-nav {
+	font-size: 16px;
+	color: white;
+	margin-top: 60px;
+	float: right;
+}
+
+.main-nav li {
+	list-style-type: none;
+	display: inline;
+	padding-right: 35px;
+}
+
+.main-nav a {
+	text-decoration: none;
+	padding-bottom: 3px;
+	color: white;
+	padding-right: 2px;
+	transition: border-bottom .2s linear;
+}
+
+.main-nav a:hover {
+	border-bottom: solid 2px white;
+}
+
+.hero {
+	width: 1140px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	position: absolute;
+}
+
+.hero-text h1 {
+	font-size: 70px;
+	color: white;
+	font-weight: normal;
+	margin-bottom: 5px;
+}
+
+.hero-text p {
+	font-size: 20px;
+	color: white;
+}
+
+button {
+	font-size: 16px;
+	padding: 15px 15px;
+	width: 200px;
+	text-align: center;
+	margin-top: 80px;
+	background-color: white;
+	border: none;
+	transition: background-color .3s linear, color .3s linear;
+}
+
+button:hover {
+	background-color: rgba(255,255,255,0.2);
+	color: white;
+}
+
+.container {
+	width: 1140px;
+	margin: 70px auto;
+}
+
+.mission, .cheese, .tours {
+	margin-bottom: 90px;
+}
+
+.mission-flex, .tours-flex {
+	display: flex;
+	justify-content: space-between;
+}
+
+.mission-text, .tours-text {
+	text-align: justify;
+	width: 450px;
+}
+
+.mission img, .tours img {
+	width: 550px;
+	height: 550px;
+	object-fit: cover;
+}
+
+.mission h1, .cheese h1, .tours h1 {
+	font-size: 50px;
+	font-weight: normal;
+}
+
+.mission p, .cheese p, .tours p {
+	font-size: 20px;
+	line-height: 145%;
+}
+
+.cheese-flex {
+	display: flex;
+	justify-content: space-between;
+}
+
+.cheese-column {
+	width: 350px;
+	text-align: justify;
+}
+
+.cheese h1 {
+	text-align: center;
+}
+
+.cheese h2 {
+	font-weight: normal;
+	font-size: 30px;
+}
+
+.cheese img {
+	width: 350px;
+}
+
+.cheese-image img {
+	transition: opacity .3s linear;
+}
+
+.cheese-image img:hover {
+	opacity: 0.5;
+}
+
+footer {
+	width: 1140px;
+	margin: 125px auto 80px auto;
+}
+
+footer p {
+	font-size: 20px;
+	margin-top: 40px;
+}
+
+.footer-icons, footer p {
+	text-align: center;
+}
+
+.footer-icons svg {
+	margin-right: 30px;
+	margin-left: 30px;
+	transition: fill .3s linear;
+}
+
+#google svg:hover {
+	fill: #cd3717;
+}
+
+#facebook svg:hover {
+	fill: #3b5998;
+}
+
+#twitter svg:hover {
+	fill: #1DA1F2;
+}
+
+/*Responsive web page:*/
+
+@media all and (max-width: 1200px) {
+	.container {width: 100vw;}
+	.mission-image {margin: 0 auto;}
+	.mission-image img {width: 750px; height: 750px;}
+	.mission-flex {flex-direction: column-reverse; align-content: center;}
+	.mission-text {margin: 0 auto; width: 750px;}
+	.mission-text h1, .tours-text h1 {text-align: center;}
+	.cheese-flex {flex-direction: column;}
+	.cheese-column {margin: 20px auto; width: 700px;}
+	.cheese-column h2 {text-align: center;}
+	.cheese-image img {width: 700px;}
+	.cheese-text {width: 700px;}
+	.tours-flex {flex-direction: column;}
+	.tours-image {margin: 0 auto;}
+	.tours-image img {width: 750px; height: 750px;}
+	.tours-text {margin: 0 auto; width: 750px;}
+	.row {width: 750px;}
+	.hero {width: 750px;}
+	.hero {text-align: center;}
+	footer {width: 100vw;}
+	header {background-position: bottom left;}
+	#nav-icon{display: hidden;}
+}
+
+@media all and (max-width: 1023px) {
+	.mission-image img {width: 650px; height: 650px;}
+	.mission-text {width: 650px;}
+	.cheese-column {width: 600px;}
+	.cheese-image img {width: 600px;}
+	.tours-image img {width: 650px; height: 650px;}
+	.tours-text {width: 650px;}
+	.row {width: 650px;}
+	.hero {width: 650px;}
+}
+
+@media all and (max-width: 767px) {
+	.mission-image img {width: 450px; height: 450px;}
+	.mission-text {width: 450px;}
+	.cheese-column {width: 400px;}
+	.cheese-image img {width: 400px;}
+	.tours-image img {width: 450px; height: 450px;}
+	.tours-text {width: 450px;}
+	.row {width: 450px;}
+	.hero {width: 450px;}
+	.mission p, .cheese p, .tours p, footer p {font-size: 15px;}
+	.mission h1, .cheese h1, .tours h1 {font-size: 35px;}
+	#nav-icon {display: inline; float: right;}
+	.main-nav ul, .main-nav:active ul {display: none;}
+	.row svg {float: right; display: inline; margin-top: 78px; fill:#ffffff;}
+	
+}
+
+@media all and (max-width: 480px) {
+	.mission-image img {width: 300px; height: 300px;}
+	.mission-text {width: 300px;}
+	.cheese-column {width: 250px;}
+	.cheese-image img {width: 250px;}
+	.tours-image img {width: 300px; height: 300px;}
+	.tours-text {width: 300px;}
+	.row {width: 300px;}
+	.hero {width: 300px;}
+}
